@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import User from "./components/user";
 
 function App() {
+  const isUser = true;
+  const name = "alex";
+  const age = 30;
+  const loginData = {
+    loginName: "Alexander",
+    email: "alex9185@gmail.com",
+    password: "qwerty123456",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <User
+        loginUser={isUser}
+        userName={name}
+        userAge={age}
+        loginData={loginData}
+      />
+    </>
   );
 }
 
